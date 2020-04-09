@@ -291,7 +291,7 @@ const Benefits = () => {
         textcolor={benefit.textColor}
       >
         <MobileExpansionPanelSummary
-          onTouchEnd={() => handleSelectBenefitMobile(benefit)}
+          onClick={() => handleSelectBenefitMobile(benefit)}
           border={
             benefitSelectedMobile === benefit.value ? "2px solid #000000" : null
           }

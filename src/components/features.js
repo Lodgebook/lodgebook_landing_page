@@ -38,6 +38,9 @@ const Title = styled.h1`
   line-height: 110%;
   text-align: center;
   margin-top: 3.5rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 3.5rem;
+  }
 `
 
 const ColumnTitle = styled.p`
@@ -47,6 +50,9 @@ const ColumnTitle = styled.p`
   font-weight: normal;
   margin-bottom: 2rem;
   text-align: center;
+  @media only screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
 `
 
 const ColumnsSection = styled.div`
@@ -60,6 +66,7 @@ const Column = styled.div`
   margin: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
 
 const Feature = styled.div`
@@ -67,24 +74,36 @@ const Feature = styled.div`
   width: 22.5rem;
   padding: 1.5rem;
   background: ${colors.LODGEBOOK_WHITE};
+  border-top: ${props => props.bordertop};
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
   margin-bottom: 0.5rem;
   font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  @media only screen and (max-width: 480px) {
+    width: 90%;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    height: 8rem;
+  }
 `
 
 const FeatureIcon = styled.img`
   width: 2rem;
   height: 2rem;
   margin-right: 1.5rem;
+  @media only screen and (max-width: 480px) {
+    width: 3rem;
+    height: 3rem;
+  }
 `
 
 const seamlessFeaturesData = [
   {
     title: "Compatible with most web browsers on mobile and desktop",
     image: BrowserIcon,
+    borderTop: "3px solid black",
   },
   {
     title: "Accessible via a downloadable app on iOS and Android",
@@ -112,6 +131,7 @@ const powerfulFeaturesData = [
   {
     title: "Update clean and vacancy statuses of rooms in real-time",
     image: UpdateIcon,
+    borderTop: "3px solid black",
   },
   {
     title: "Create, update, and assign tasks to other staff members",
@@ -139,7 +159,7 @@ const powerfulFeaturesData = [
 
 const seamlessFeatures = seamlessFeaturesData.map(feature => {
   return (
-    <Feature key={feature.title}>
+    <Feature key={feature.title} bordertop={feature.borderTop}>
       <FeatureIcon src={feature.image} />
       {feature.title}
     </Feature>
@@ -148,7 +168,7 @@ const seamlessFeatures = seamlessFeaturesData.map(feature => {
 
 const powerfulFeatures = powerfulFeaturesData.map(feature => {
   return (
-    <Feature key={feature.title}>
+    <Feature key={feature.title} bordertop={feature.borderTop}>
       <FeatureIcon src={feature.image} />
       {feature.title}
     </Feature>
@@ -161,12 +181,12 @@ const Features = () => {
       <Title>Features</Title>
       <ColumnsSection>
         <Column>
-          <ColumnTitle>Seamless Technology</ColumnTitle>
-          {seamlessFeatures}
-        </Column>
-        <Column>
           <ColumnTitle>Powerful Functionality</ColumnTitle>
           {powerfulFeatures}
+        </Column>
+        <Column>
+          <ColumnTitle>Seamless Technology</ColumnTitle>
+          {seamlessFeatures}
         </Column>
       </ColumnsSection>
     </FeaturesContainer>
