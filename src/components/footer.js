@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import logo from "../images/logo.png"
 import colors from "../colors"
-import scrollTo from 'gatsby-plugin-smoothscroll'
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -64,9 +64,9 @@ const Footer = () => (
     </Section>
     <Section>
       <FooterText>
-        <FooterLink onClick= {() => scrollTo('#users')}>Users </FooterLink>
-        <FooterLink onClick= {() => scrollTo('#features')}>Features </FooterLink>
-        <FooterLink onClick= {() => scrollTo('#contact')}>Contact </FooterLink>
+        <FooterLink onClick={() => scrollTo("#users")}>Users </FooterLink>
+        <FooterLink onClick={() => scrollTo("#features")}>Features </FooterLink>
+        <FooterLink onClick={() => scrollTo("#contact")}>Contact </FooterLink>
       </FooterText>
       <FooterText>© {new Date().getFullYear()} All rights reserved.</FooterText>
     </Section>

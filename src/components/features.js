@@ -157,7 +157,7 @@ const powerfulFeatures = powerfulFeaturesData.map(feature => {
 
 const Features = () => {
   return (
-    <FeaturesContainer id = "features">
+    <FeaturesContainer id="features">
       <Title>Features</Title>
       <ColumnsSection>
         <Column>

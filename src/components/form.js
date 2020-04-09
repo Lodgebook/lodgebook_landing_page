@@ -155,7 +155,7 @@ const CTAButton = styled.button`
 `
 
 const Form = () => (
-  <FormContainer id = "contact">
+  <FormContainer id="contact">
     <HeadlineContainer>
       <MainHeadline>Ready to work smarter?</MainHeadline>
       <SupportingHeadline>

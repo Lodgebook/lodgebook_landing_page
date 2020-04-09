@@ -3,7 +3,7 @@ import styled from "styled-components"
 import DesktopMockupImage from "../images/desktop-mockup.png"
 import MobileMockupImage from "../images/mobile-mockup.png"
 import colors from "../colors"
-import scrollTo from 'gatsby-plugin-smoothscroll'
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const HeroContainer = styled.div`
   margin-top: 4.5rem;
@@ -132,7 +132,7 @@ const Hero = () => (
         A simple way to streamline operations and give guests the best
         experience possible.
       </SupportingHeadline>
-      <CTAButton onClick= {() => scrollTo('#features')}>See features</CTAButton>
+      <CTAButton onClick={() => scrollTo("#features")}>See features</CTAButton>
     </HeadlineContainer>
     <ImageContainer>
       <MobileMockup src={MobileMockupImage} />

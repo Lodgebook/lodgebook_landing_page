@@ -317,9 +317,7 @@ const Benefits = () => {
         <MobileExpansionPanelDetails>
           <BenefitImageContainer>
             <BenefitImage src={benefit.image} />
-            <BenefitDescription>
-              {benefit.description}
-            </BenefitDescription>
+            <BenefitDescription>{benefit.description}</BenefitDescription>
           </BenefitImageContainer>
         </MobileExpansionPanelDetails>
       </MobileExpansionPanel>

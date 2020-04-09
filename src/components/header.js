@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import logo from "../images/logo.png"
-import scrollTo from 'gatsby-plugin-smoothscroll'
+import scrollTo from "gatsby-plugin-smoothscroll"
 import colors from "../colors"
 
 const HeaderContainer = styled.div`
@@ -30,10 +30,12 @@ const NavigationItem = styled.p`
   font-weight: 500;
   cursor: pointer;
   @media only screen and (max-width: 480px) {
-    display: ${props => {return (props.hideOnMobile ? 'none': 'block')}};
+    display: ${props => {
+      return props.hideOnMobile ? "none" : "block"
+    }};
     font-size: 1.4rem;
     color: lightseagreen;
-    font-family: 'GraphikBold'
+    font-family: "GraphikBold";
   }
 `
 
@@ -86,9 +88,15 @@ const Header = () => (
       <LogoText>Lodgebook</LogoText>
     </LogoContainer>
     <NavigationContainer>
-      <NavigationItem onClick= {() => scrollTo('#users')} hideOnMobile = {true}>Users</NavigationItem>
-      <NavigationItem onClick= {() => scrollTo('#features')} hideOnMobile = {true}>Features</NavigationItem>
-      <NavigationItem onClick= {() => scrollTo('#contact')} hideOnMobile = {false}>Contact</NavigationItem>
+      <NavigationItem onClick={() => scrollTo("#users")} hideOnMobile={true}>
+        Users
+      </NavigationItem>
+      <NavigationItem onClick={() => scrollTo("#features")} hideOnMobile={true}>
+        Features
+      </NavigationItem>
+      <NavigationItem onClick={() => scrollTo("#contact")} hideOnMobile={false}>
+        Contact
+      </NavigationItem>
       <Login>Login </Login>
     </NavigationContainer>
   </HeaderContainer>

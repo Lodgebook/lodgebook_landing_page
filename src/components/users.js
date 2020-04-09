@@ -150,21 +150,21 @@ const UserDescription = styled.p`
 const NavigationDotsContainer = styled.div`
   justify-content: center;
   display: none;
-@media only screen and (max-width: 480px) {
-  display: flex;
-}
+  @media only screen and (max-width: 480px) {
+    display: flex;
+  }
 `
 
 const NavigationDots = styled.img`
-width: 7.5rem;
-margin: 2rem 1rem 1rem 1rem;
+  width: 7.5rem;
+  margin: 2rem 1rem 1rem 1rem;
 `
 
 const CarouselMobile = styled(Carousel)`
-display: none;
-@media only screen and (max-width: 480px) {
-  display: block;
-}
+  display: none;
+  @media only screen and (max-width: 480px) {
+    display: block;
+  }
 `
 
 const CarouselSlide = styled.div`
@@ -307,26 +307,28 @@ const Users = () => {
           <CarouselImage src={user.icon} />
         </CarouselImageContainer>
         <CarouselTextContainer backgroundColor={user.backgroundColor}>
-    <CarouselTitle >{user.title}</CarouselTitle>
-          <CarouselDetails >
-            {user.description}
-          </CarouselDetails>
+          <CarouselTitle>{user.title}</CarouselTitle>
+          <CarouselDetails>{user.description}</CarouselDetails>
         </CarouselTextContainer>
       </CarouselSlide>
     )
   })
 
   return (
-    <Container id = "users">
+    <Container id="users">
       <TitleContainer>
         <Title>Users of Lodgebook</Title>
       </TitleContainer>
       <UserImagesDesktop>{userImages}</UserImagesDesktop>
       <UserDetailsDesktop>{userDetails} </UserDetailsDesktop>
       <NavigationDotsContainer>
-        <NavigationDots src= {navigationImage}/>
+        <NavigationDots src={navigationImage} />
       </NavigationDotsContainer>
-      <CarouselMobile showIndicators={false} showStatus={false} onChange = {(index) => handleSetNavigationImage(index)}>
+      <CarouselMobile
+        showIndicators={false}
+        showStatus={false}
+        onChange={index => handleSetNavigationImage(index)}
+      >
         {carouselItems}
       </CarouselMobile>
     </Container>

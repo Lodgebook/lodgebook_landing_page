@@ -77,29 +77,34 @@ const iconsData = [
   {
     image: TrashBin,
     description: "Requests from guests are easily forgotten.",
-    containerWidth: '10rem',
-    containerWidthMobile: '80%'
+    containerWidth: "10rem",
+    containerWidthMobile: "80%",
   },
   {
     image: BrokenPencil,
     description:
       "Written tasks aren't traceable, leading to unfinished business.",
-    containerWidth: '10rem',
-    containerWidthMobile: '90%'
+    containerWidth: "10rem",
+    containerWidthMobile: "90%",
   },
   {
     image: MessyBed,
     description:
       "Improper maintenance results in high costs and low-quality rooms.",
-    containerWidth: '11rem',
-    containerWidthMobile: '100%'
+    containerWidth: "11rem",
+    containerWidthMobile: "100%",
   },
 ]
 
 const icons = iconsData.map(icon => (
-  <IconContainer >
+  <IconContainer>
     <Icon src={icon.image} />
-    <IconText containerWidthMobile = {icon.containerWidthMobile} containerWidth = {icon.containerWidth}>{icon.description}</IconText>
+    <IconText
+      containerWidthMobile={icon.containerWidthMobile}
+      containerWidth={icon.containerWidth}
+    >
+      {icon.description}
+    </IconText>
   </IconContainer>
 ))
 
