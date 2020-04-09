@@ -66,8 +66,8 @@ const BenefitSelector = styled.div`
   justify-content: center;
   cursor: pointer;
   border: ${props => props.border};
-  background-color: ${props => props.backgroundColor};
-  color: ${props => props.textColor};
+  background-color: ${props => props.backgroundcolor};
+  color: ${props => props.textcolor};
 `
 
 const BenefitImage = styled.img`
@@ -148,8 +148,8 @@ const MobileExpansionPanel = styled(ExpansionPanel)`
 const MobileExpansionPanelSummary = styled(ExpansionPanelSummary)`
   border: ${props => props.border} !important;
   font-size: 2rem;
-  background-color: ${props => props.backgroundColor} !important;
-  color: ${props => props.textColor} !important;
+  background-color: ${props => props.backgroundcolor} !important;
+  color: ${props => props.textcolor} !important;
 `
 
 const PanelSummaryContainer = styled.div`
@@ -266,11 +266,12 @@ const Benefits = () => {
   const benefitSelectors = listOfBenefits.map(benefit => {
     return (
       <BenefitSelector
+        key={benefit.value}
         border={
           benefitSelectedDesktop === benefit.value ? "2px solid #000000" : null
         }
-        backgroundColor={benefit.backgroundColor}
-        textColor={
+        backgroundcolor={benefit.backgroundColor}
+        textcolor={
           benefitSelectedDesktop === benefit.value
             ? colors.LODGEBOOK_WHITE
             : benefit.textColor
@@ -285,16 +286,17 @@ const Benefits = () => {
   const benefitExpansionPanels = listOfBenefits.map(benefit => {
     return (
       <MobileExpansionPanel
+        key={benefit.value}
         expanded={benefitSelectedMobile === benefit.value}
-        textColor={benefit.textColor}
-        onTouchStart={() => handleSelectBenefitMobile(benefit)}
+        textcolor={benefit.textColor}
       >
         <MobileExpansionPanelSummary
+          onTouchStart={() => handleSelectBenefitMobile(benefit)}
           border={
             benefitSelectedMobile === benefit.value ? "2px solid #000000" : null
           }
-          backgroundColor={benefit.backgroundColor}
-          textColor={
+          backgroundcolor={benefit.backgroundColor}
+          textcolor={
             benefitSelectedMobile === benefit.value
               ? colors.LODGEBOOK_WHITE
               : benefit.textColor

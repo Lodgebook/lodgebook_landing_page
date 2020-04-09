@@ -33,7 +33,7 @@ const NavigationItem = styled.p`
     display: ${props => {
       return props.hideOnMobile ? "none" : "block"
     }};
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: lightseagreen;
     font-family: "GraphikBold";
   }
@@ -55,7 +55,7 @@ const Login = styled.button`
   @media only screen and (max-width: 480px) {
     border: 1px solid ${colors.LODGEBOOK_PRIMARY};
     height: 3rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 `
 

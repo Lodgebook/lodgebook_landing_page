@@ -97,7 +97,7 @@ const iconsData = [
 ]
 
 const icons = iconsData.map(icon => (
-  <IconContainer>
+  <IconContainer key={icon.description}>
     <Icon src={icon.image} />
     <IconText
       containerWidthMobile={icon.containerWidthMobile}

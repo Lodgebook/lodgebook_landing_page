@@ -139,7 +139,7 @@ const powerfulFeaturesData = [
 
 const seamlessFeatures = seamlessFeaturesData.map(feature => {
   return (
-    <Feature>
+    <Feature key={feature.title}>
       <FeatureIcon src={feature.image} />
       {feature.title}
     </Feature>
@@ -148,7 +148,7 @@ const seamlessFeatures = seamlessFeaturesData.map(feature => {
 
 const powerfulFeatures = powerfulFeaturesData.map(feature => {
   return (
-    <Feature>
+    <Feature key={feature.title}>
       <FeatureIcon src={feature.image} />
       {feature.title}
     </Feature>

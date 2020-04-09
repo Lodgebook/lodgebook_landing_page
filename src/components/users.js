@@ -273,6 +273,7 @@ const Users = () => {
   const userImages = usersData.map(user => {
     return (
       <UserImage
+        key={user.value}
         onMouseEnter={() => handleSetUser(user)}
         width={user.width}
         right={user.positionRight}
@@ -287,6 +288,7 @@ const Users = () => {
   const userDetails = usersData.map(user => {
     return (
       <UserDetails
+        key={user.value}
         onMouseEnter={() => handleSetUser(user)}
         opacity={user.value === userSelected ? 1 : 0.3}
         backgroundColor={
@@ -302,7 +304,7 @@ const Users = () => {
 
   const carouselItems = usersData.map(user => {
     return (
-      <CarouselSlide>
+      <CarouselSlide key={user.value}>
         <CarouselImageContainer>
           <CarouselImage src={user.icon} />
         </CarouselImageContainer>
@@ -325,6 +327,7 @@ const Users = () => {
         <NavigationDots src={navigationImage} />
       </NavigationDotsContainer>
       <CarouselMobile
+        showThumbs={false}
         showIndicators={false}
         showStatus={false}
         onChange={index => handleSetNavigationImage(index)}
