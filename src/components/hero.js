@@ -133,7 +133,7 @@ const Hero = () => (
         A simple way to streamline operations and give guests the best
         experience possible.
       </SupportingHeadline>
-      <CTAButton onClick={() => scrollTo("#features")}>See features</CTAButton>
+      <CTAButton onClick={() => scrollTo("#contact")}>Sign up</CTAButton>
     </HeadlineContainer>
     <ImageContainer>
       <MobileImageWrapper>
