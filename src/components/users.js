@@ -75,6 +75,9 @@ const TitleContainer = styled.div`
   align-items: center;
   flex-direction: column;
   margin: 3rem 0rem 1.5rem 0rem;
+  @media only screen and (max-width: 480px) {
+    margin: 2rem 0rem 0rem 0rem;
+  }
 `
 
 const UserImageWrapper = styled.div`
@@ -147,6 +150,7 @@ const UserDescription = styled.p`
 const NavigationDotsContainer = styled.div`
   justify-content: center;
   display: none;
+  margin-bottom: 0rem;
   @media only screen and (max-width: 480px) {
     display: flex;
   }
@@ -159,6 +163,7 @@ const NavigationDots = styled.img`
 
 const CarouselMobile = styled(Carousel)`
   display: none;
+  margin-top: 0rem;
   @media only screen and (max-width: 480px) {
     display: block;
   }

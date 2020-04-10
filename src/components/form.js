@@ -44,6 +44,7 @@ const AgreementDescription = styled.p`
   width: 60%;
   @media only screen and (max-width: 480px) {
     width: 100%;
+    font-size: 1.2rem;
   }
 `
 
@@ -63,6 +64,10 @@ const FormInputContainer = styled.div`
 
 const FormLabel = styled.label`
   margin: 1rem 0rem 0.5rem 0rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+  }
 `
 
 const FormInput = styled.input`
@@ -77,6 +82,9 @@ const FormInput = styled.input`
   @media only screen and (max-width: 480px) {
     width: 100%;
     margin-bottom: 1rem;
+    padding: 2rem 1rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
   }
 `
 
@@ -91,6 +99,7 @@ const FormTextArea = styled.textarea`
   padding: 1rem;
   @media only screen and (max-width: 480px) {
     width: 100%;
+    font-size: 1.3rem;
   }
 `
 
@@ -151,6 +160,10 @@ const CTAButton = styled.button`
   &:hover {
     color: rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 15px rgba(50, 178, 174, 0.5);
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 1.6rem;
+    padding: 0.75rem 1.5rem;
   }
 `
 
