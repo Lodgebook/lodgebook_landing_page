@@ -57,6 +57,7 @@ const FooterText = styled.p`
     flex-direction: column;
     align-items: flex-start;
     font-size: 1.4rem;
+    margin-top: ${props => props.margintop};
   }
 `
 
@@ -93,7 +94,7 @@ const Footer = () => (
         <FooterLink onClick={() => scrollTo("#features")}>Features </FooterLink>
         <FooterLink onClick={() => scrollTo("#contact")}>Contact </FooterLink>
       </FooterText>
-      <FooterText display = 'flex' style = {{fontWeight: 'normal', marginTop: '5rem'}}>© {new Date().getFullYear()} All rights reserved.</FooterText>
+      <FooterText margintop = '5rem' display = 'flex' style = {{fontWeight: 'normal'}}>© {new Date().getFullYear()} All rights reserved.</FooterText>
     </Section>
   </FooterContainer>
 )
