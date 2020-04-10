@@ -39,9 +39,13 @@ const NavigationItem = styled.p`
   }
 `
 
-const Login = styled.button`
+const Login = styled.a`
   border: 2px solid ${colors.LODGEBOOK_PRIMARY};
   color: lightseagreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   margin: 0rem 1.1rem;
   width: 6.2rem;
   height: 2.6rem;
@@ -98,7 +102,9 @@ const Header = () => (
       <NavigationItem onClick={() => scrollTo("#contact")} hideOnMobile={false}>
         Contact
       </NavigationItem>
-      <Login>Login </Login>
+      <Login className="login" href="https://app.mylodgebook.com/">
+        Login{" "}
+      </Login>
     </NavigationContainer>
   </HeaderContainer>
 )

@@ -82,6 +82,9 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
+a.login {
+  font-family: "GraphikBold";
+}
 a:active,
 a:hover {
   outline-width: 0;
