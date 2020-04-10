@@ -11,11 +11,20 @@ const FooterContainer = styled.footer`
   background: rgba(87, 143, 175, 0.1);
   height: 15rem;
   margin-top: 3rem;
+  @media only screen and (max-width: 480px) {
+    height: 100%;
+    background: #FBFBFB;
+  }
 `
 
 const LogoContainer = styled.footer`
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin 2.5rem 0rem;
+  }
 `
 
 const Section = styled.div`
@@ -23,12 +32,19 @@ const Section = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const Logo = styled.img`
   height: 2.2rem;
   width: 2.2rem;
   margin-right: 0.7rem;
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 1rem;
+  }
 `
 
 const FooterText = styled.p`
@@ -36,6 +52,11 @@ const FooterText = styled.p`
   font-weight: bold;
   font-style: normal;
   line-height: 140%;
+  @media only screen and (max-width: 480px) {
+    display: ${props => props.display};
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const FooterLink = styled.a`
@@ -45,6 +66,9 @@ const FooterLink = styled.a`
   color: ${colors.LODGEBOOK_BLACK};
   cursor: pointer;
   margin-right: 2rem;
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 1rem;
+  }
 `
 
 const Footer = () => (
@@ -52,23 +76,23 @@ const Footer = () => (
     <Section>
       <LogoContainer>
         <Logo src={logo} />
-        <FooterText>
+        <FooterText display = 'flex'>
           Lodgebook <br />
           Let's work smarter.
         </FooterText>
       </LogoContainer>
-      <FooterText>
+      <FooterText display = 'none'>
         support@mylodgebook.com <br />
         (562) 455-8688
       </FooterText>
     </Section>
     <Section>
-      <FooterText>
+      <FooterText display = 'flex'>
         <FooterLink onClick={() => scrollTo("#users")}>Users </FooterLink>
         <FooterLink onClick={() => scrollTo("#features")}>Features </FooterLink>
         <FooterLink onClick={() => scrollTo("#contact")}>Contact </FooterLink>
       </FooterText>
-      <FooterText>© {new Date().getFullYear()} All rights reserved.</FooterText>
+      <FooterText display = 'flex' style = {{fontWeight: 'normal', marginTop: '5rem'}}>© {new Date().getFullYear()} All rights reserved.</FooterText>
     </Section>
   </FooterContainer>
 )

@@ -68,9 +68,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-  @media only screen and (max-width: 480px) {
-    justify-content: flex-end;
-  }
 `
 const TitleContainer = styled.div`
   display: flex;
@@ -162,7 +159,7 @@ const NavigationDotsContainer = styled.div`
 const NavigationDots = styled.img`
   width: 7.5rem;
   height: 3rem;
-  margin: 0rem;
+  margin: 1.5rem 0rem 0.5rem 0rem;
 `
 
 const CarouselMobile = styled(Carousel)`
