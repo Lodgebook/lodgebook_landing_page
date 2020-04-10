@@ -161,6 +161,7 @@ const NavigationDotsContainer = styled.div`
 
 const NavigationDots = styled.img`
   width: 7.5rem;
+  height: 3rem;
   margin: 0rem;
 `
 
