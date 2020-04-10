@@ -4,9 +4,8 @@ import PoolWater from "../images/pool-water.jpg"
 import HandPointing from "../images/hand-pointing.svg"
 import colors from "../colors"
 
-
 const BannerText = styled.p`
-cursor: pointer;
+  cursor: pointer;
   font-size: 1.1rem;
   padding: 0rem 2rem;
   @media only screen and (max-width: 480px) {
@@ -49,7 +48,7 @@ const BannerImage = styled.img`
 `
 
 const Banner = () => (
-  <BannerContainer href = "https://www.wyndhamhotels.com/">
+  <BannerContainer href="https://www.wyndhamhotels.com/">
     <BannerImage src={HandPointing} />
     <BannerText>
       We have been selected by

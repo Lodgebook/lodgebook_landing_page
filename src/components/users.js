@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import Image from './image';
+import Image from "./image"
 import UsersBackground from "../images/users-blue-background.jpg"
 import NavigationDots1 from "../images/navigation-dots-1.svg"
 import NavigationDots2 from "../images/navigation-dots-2.svg"
@@ -12,7 +12,7 @@ import colors from "../colors"
 
 const usersData = [
   {
-    icon: 'manager.png',
+    icon: "manager.png",
     positionBottom: "0rem",
     positionRight: "74%",
     positionRightSmallerScreen: "70%",
@@ -25,7 +25,7 @@ const usersData = [
     value: "manager",
   },
   {
-    icon: 'front-desk.png',
+    icon: "front-desk.png",
     positionBottom: "-0.3rem",
     positionRight: "55%",
     positionRightSmallerScreen: "53%",
@@ -38,7 +38,7 @@ const usersData = [
     value: "frontDesk",
   },
   {
-    icon: 'maintenance.png',
+    icon: "maintenance.png",
     positionBottom: "-2rem",
     positionRight: "35%",
     backgroundColor: colors.LODGEBOOK_YELLOW_DARK,
@@ -50,7 +50,7 @@ const usersData = [
     value: "maintenance",
   },
   {
-    icon: 'housekeeper.png',
+    icon: "housekeeper.png",
     positionBottom: "-5rem",
     positionRight: "15%",
     backgroundColor: colors.LODGEBOOK_ACCENT_DARK,
@@ -279,8 +279,8 @@ const Users = () => {
         opacity={user.value === userSelected ? 1 : 0.3}
         src={user.icon}
       >
-        <Image filename = {user.icon}/>
-        </UserImageWrapper>
+        <Image filename={user.icon} />
+      </UserImageWrapper>
     )
   })
 
@@ -305,7 +305,7 @@ const Users = () => {
     return (
       <CarouselSlide key={user.value}>
         <CarouselImageContainer>
-          <CarouselImage filename = {user.icon}/>
+          <CarouselImage filename={user.icon} />
         </CarouselImageContainer>
         <CarouselTextContainer backgroundColor={user.backgroundColor}>
           <CarouselTitle>{user.title}</CarouselTitle>

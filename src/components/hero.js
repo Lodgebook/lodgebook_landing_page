@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Image from './image';
+import Image from "./image"
 import colors from "../colors"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
@@ -32,7 +32,7 @@ const ImageContainer = styled.div`
 `
 
 const DesktopImageWrapper = styled.div`
-pointer-events:none;
+  pointer-events: none;
   width: 44rem;
   position: absolute;
   bottom: -5.5rem;
@@ -44,7 +44,7 @@ pointer-events:none;
 `
 
 const MobileImageWrapper = styled.div`
-pointer-events:none;
+  pointer-events: none;
   width: 14rem;
   bottom: -5.5rem;
   left: 2rem;
@@ -100,9 +100,6 @@ const CircularBackground = styled.div`
   }
 `
 
-
-
-
 const CTAButton = styled.button`
   font-size: 1rem;
   font-style: normal;
@@ -140,10 +137,10 @@ const Hero = () => (
     </HeadlineContainer>
     <ImageContainer>
       <MobileImageWrapper>
-      <Image filename = {'mobile-mockup.png'}/>
+        <Image filename={"mobile-mockup.png"} />
       </MobileImageWrapper>
       <DesktopImageWrapper>
-      <Image filename = {'desktop-mockup.png'}/>
+        <Image filename={"desktop-mockup.png"} />
       </DesktopImageWrapper>
       <CircularBackground />
     </ImageContainer>
