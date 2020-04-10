@@ -56,6 +56,7 @@ const FooterText = styled.p`
     display: ${props => props.display};
     flex-direction: column;
     align-items: flex-start;
+    font-size: 1.4rem;
   }
 `
 

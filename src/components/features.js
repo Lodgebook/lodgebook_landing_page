@@ -16,6 +16,13 @@ import FeaturesBackgroundWeb from "../images/features-pattern-web.svg"
 import FeaturesBackgroundMobile from "../images/features-pattern-mobile.svg"
 import colors from "../colors"
 
+
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
 const FeaturesContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -177,8 +184,9 @@ const powerfulFeatures = powerfulFeaturesData.map(feature => {
 
 const Features = () => {
   return (
-    <FeaturesContainer id="features">
+    <Container id="features">
       <Title>Features</Title>
+    <FeaturesContainer>
       <ColumnsSection>
         <Column>
           <ColumnTitle>Powerful Functionality</ColumnTitle>
@@ -190,6 +198,7 @@ const Features = () => {
         </Column>
       </ColumnsSection>
     </FeaturesContainer>
+    </Container>
   )
 }
 
