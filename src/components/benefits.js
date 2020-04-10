@@ -292,9 +292,6 @@ const Benefits = () => {
       >
         <MobileExpansionPanelSummary
           onClick={() => handleSelectBenefitMobile(benefit)}
-          border={
-            benefitSelectedMobile === benefit.value ? "2px solid #000000" : null
-          }
           backgroundcolor={benefit.backgroundColor}
           textcolor={
             benefitSelectedMobile === benefit.value

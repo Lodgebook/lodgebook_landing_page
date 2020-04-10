@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import DesktopMockupImage from "../images/desktop-mockup.png"
-import MobileMockupImage from "../images/mobile-mockup.png"
+import Image from './image';
 import colors from "../colors"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
@@ -32,10 +31,11 @@ const ImageContainer = styled.div`
   flex-shrink: 0;
 `
 
-const DesktopMockup = styled.img`
-  width: 42rem;
+const DesktopImageWrapper = styled.div`
+pointer-events:none;
+  width: 44rem;
   position: absolute;
-  bottom: -5rem;
+  bottom: -5.5rem;
   right: -1rem;
   z-index: 1;
   @media only screen and (max-width: 480px) {
@@ -43,7 +43,8 @@ const DesktopMockup = styled.img`
   }
 `
 
-const MobileMockup = styled.img`
+const MobileImageWrapper = styled.div`
+pointer-events:none;
   width: 14rem;
   bottom: -5.5rem;
   left: 2rem;
@@ -99,6 +100,9 @@ const CircularBackground = styled.div`
   }
 `
 
+
+
+
 const CTAButton = styled.button`
   font-size: 1rem;
   font-style: normal;
@@ -135,8 +139,12 @@ const Hero = () => (
       <CTAButton onClick={() => scrollTo("#features")}>See features</CTAButton>
     </HeadlineContainer>
     <ImageContainer>
-      <MobileMockup src={MobileMockupImage} />
-      <DesktopMockup src={DesktopMockupImage} />
+      <MobileImageWrapper>
+      <Image filename = {'mobile-mockup.png'}/>
+      </MobileImageWrapper>
+      <DesktopImageWrapper>
+      <Image filename = {'desktop-mockup.png'}/>
+      </DesktopImageWrapper>
       <CircularBackground />
     </ImageContainer>
   </HeroContainer>

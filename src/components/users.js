@@ -1,9 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import ManagerImage from "../images/manager.png"
-import MaintenanceImage from "../images/maintenance.png"
-import FrontDeskImage from "../images/front-desk.png"
-import HousekeeperImage from "../images/housekeeper.png"
+import Image from './image';
 import UsersBackground from "../images/users-blue-background.jpg"
 import NavigationDots1 from "../images/navigation-dots-1.svg"
 import NavigationDots2 from "../images/navigation-dots-2.svg"
@@ -15,7 +12,7 @@ import colors from "../colors"
 
 const usersData = [
   {
-    icon: ManagerImage,
+    icon: 'manager.png',
     positionBottom: "0rem",
     positionRight: "74%",
     positionRightSmallerScreen: "70%",
@@ -28,7 +25,7 @@ const usersData = [
     value: "manager",
   },
   {
-    icon: FrontDeskImage,
+    icon: 'front-desk.png',
     positionBottom: "-0.3rem",
     positionRight: "55%",
     positionRightSmallerScreen: "53%",
@@ -41,7 +38,7 @@ const usersData = [
     value: "frontDesk",
   },
   {
-    icon: MaintenanceImage,
+    icon: 'maintenance.png',
     positionBottom: "-2rem",
     positionRight: "35%",
     backgroundColor: colors.LODGEBOOK_YELLOW_DARK,
@@ -53,7 +50,7 @@ const usersData = [
     value: "maintenance",
   },
   {
-    icon: HousekeeperImage,
+    icon: 'housekeeper.png',
     positionBottom: "-5rem",
     positionRight: "15%",
     backgroundColor: colors.LODGEBOOK_ACCENT_DARK,
@@ -80,7 +77,7 @@ const TitleContainer = styled.div`
   margin: 3rem 0rem 1.5rem 0rem;
 `
 
-const UserImage = styled.img`
+const UserImageWrapper = styled.div`
   position: absolute;
   cursor: pointer;
   width: ${props => props.width};
@@ -177,7 +174,7 @@ const CarouselSlide = styled.div`
   height: 100%;
 `
 
-const CarouselImage = styled.img`
+const CarouselImage = styled(Image)`
   position: absolute;
   padding: 25rem;
   right: 1rem;
@@ -272,7 +269,7 @@ const Users = () => {
 
   const userImages = usersData.map(user => {
     return (
-      <UserImage
+      <UserImageWrapper
         key={user.value}
         onMouseEnter={() => handleSetUser(user)}
         width={user.width}
@@ -281,7 +278,9 @@ const Users = () => {
         bottom={user.positionBottom}
         opacity={user.value === userSelected ? 1 : 0.3}
         src={user.icon}
-      />
+      >
+        <Image filename = {user.icon}/>
+        </UserImageWrapper>
     )
   })
 
@@ -306,7 +305,7 @@ const Users = () => {
     return (
       <CarouselSlide key={user.value}>
         <CarouselImageContainer>
-          <CarouselImage src={user.icon} />
+          <CarouselImage filename = {user.icon}/>
         </CarouselImageContainer>
         <CarouselTextContainer backgroundColor={user.backgroundColor}>
           <CarouselTitle>{user.title}</CarouselTitle>

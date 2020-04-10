@@ -4,8 +4,23 @@ import PoolWater from "../images/pool-water.jpg"
 import HandPointing from "../images/hand-pointing.svg"
 import colors from "../colors"
 
-const BannerContainer = styled.div`
-  margin-bottom: 1.45rem;
+
+const BannerText = styled.p`
+cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0rem 2rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+`
+
+const BannerContainer = styled.a`
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  padding-bottom: 1.45rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,15 +39,6 @@ const BannerContainer = styled.div`
   }
 `
 
-const BannerText = styled.p`
-  font-size: 1.1rem;
-  margin: 0rem 2rem;
-  @media only screen and (max-width: 480px) {
-    font-size: 1.5rem;
-    line-height: 1.5;
-  }
-`
-
 const BannerTextWithColor = styled.span`
   color: ${colors.LODGEBOOK_PRIMARY_LIGHT};
 `
@@ -43,7 +49,7 @@ const BannerImage = styled.img`
 `
 
 const Banner = () => (
-  <BannerContainer>
+  <BannerContainer href = "https://www.wyndhamhotels.com/">
     <BannerImage src={HandPointing} />
     <BannerText>
       We have been selected by

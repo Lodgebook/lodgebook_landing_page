@@ -58,7 +58,7 @@ const Footer = () => (
         </FooterText>
       </LogoContainer>
       <FooterText>
-        tony@mylodgebook.com <br />
+        support@mylodgebook.com <br />
         (562) 455-8688
       </FooterText>
     </Section>
