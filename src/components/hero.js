@@ -82,6 +82,10 @@ const SupportingHeadline = styled.p`
   }
 `
 
+const ButtonContainer = styled.div`
+  display: flex;
+`
+
 const CircularBackground = styled.div`
   border-radius: 240px;
   background-color: ${colors.LODGEBOOK_BLUE_LIGHT};
@@ -97,6 +101,25 @@ const CircularBackground = styled.div`
     width: 38rem;
     bottom: 20rem;
     right: -3rem;
+  }
+`
+
+const SecondaryButton = styled.button`
+  font-size: 1.1rem;
+  font-style: normal;
+  cursor: pointer;
+  width: 10rem;
+  height: 3.5rem;
+  border: none;
+  color: ${colors.LODGEBOOK_ACCENT};
+  margin: 0rem 0rem 0rem 3rem;
+  padding: 0.5rem 1.2rem;
+  outline: none;
+  background-color: white;
+  @media only screen and (max-width: 480px) {
+    width: 14rem;
+    height: 5.5rem;
+    font-size: 1.7rem;
   }
 `
 
@@ -133,7 +156,11 @@ const Hero = () => (
         A simple way to streamline operations and give guests the best
         experience possible.
       </SupportingHeadline>
-      <CTAButton onClick={() => scrollTo("#contact")}>Sign up</CTAButton>
+      <ButtonContainer>
+      <CTAButton onClick={() => scrollTo("#contact")}>Sign Up</CTAButton>
+      <SecondaryButton onClick={() => scrollTo("#features")}>See Features</SecondaryButton>
+      </ButtonContainer>
+      
     </HeadlineContainer>
     <ImageContainer>
       <MobileImageWrapper>

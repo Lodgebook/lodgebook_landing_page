@@ -720,4 +720,8 @@ pre tt:after {
   content: "";
 }
 
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+  opacity: 1 !important;
+}
+
 
