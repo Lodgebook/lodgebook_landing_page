@@ -94,7 +94,7 @@ const Footer = () => (
         <FooterLink onClick={() => scrollTo("#users")}>Users </FooterLink>
         <FooterLink onClick={() => scrollTo("#features")}>Features </FooterLink>
         <FooterLink onClick={() => scrollTo("#contact")}>Contact </FooterLink>
-        <Link style={{ textDecoration: 'none' }} to="/privacy-policy" partiallyActive={true}><FooterLink>Privacy Policy </FooterLink></Link>
+        <Link style={{ textDecoration: 'none' }} to="/privacy-policy"><FooterLink>Privacy Policy </FooterLink></Link>
       </FooterText>
       <FooterText margintop = '5rem' display = 'flex' style = {{fontWeight: 'normal'}}>© {new Date().getFullYear()} All rights reserved.</FooterText>
     </Section>
