@@ -116,10 +116,10 @@ const seamlessFeaturesData = [
     title: "Accessible via a downloadable app on iOS and Android",
     image: CloudIcon,
   },
-  {
-    title: "Integrate seamlessly with Sabre Property Hub",
-    image: PuzzleIcon,
-  },
+  // {
+  //   title: "Integrate seamlessly with Sabre Property Hub",
+  //   image: PuzzleIcon,
+  // },
   {
     title: "Receive updates to room and task statuses without refreshing",
     image: ClockIcon,
