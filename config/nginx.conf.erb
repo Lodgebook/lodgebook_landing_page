@@ -41,9 +41,11 @@ http {
   
     error_page 404 500 /404.html;
   
+  
+
+  
     location / {    
-      try_files $uri $uri/ $fallback;
-    
+      try_files $uri $uri/
     }
 
   
@@ -58,16 +60,9 @@ http {
 
   
 
-  # need this b/c setting $fallback to =404 will try #{root}=404 instead of returning a 404
   location @404 {
     return 404;
   }
-
-  # fallback proxy named match
-  
-
-  # fallback redirects named match
-  
 
   }
 }
