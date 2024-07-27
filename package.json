@@ -27,6 +27,9 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
+  "engines" : { 
+    "node" : ">=20.16.0 <21.0.0"
+  },
   "keywords": [
     "gatsby"
   ],
