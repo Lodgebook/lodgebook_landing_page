@@ -1,0 +1,13 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.lodgebook.mobile",
+        "sha256_cert_fingerprints": [
+          "A1:17:E2:F9:EB:89:7C:F4:77:44:0D:A0:2B:01:D0:41:06:35:F1:E5:67:B7:AE:20:0E:88:5B:C1:74:68:C5:2B"
+        ]
+      }
+    }
+  ]
+  
